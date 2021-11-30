@@ -1,0 +1,36 @@
+<div class="col-md-12">
+    <form>
+        <div class="form-group">
+            <label for="username">Gebruikersnaam</label>
+            <input type="text" class="form-control" name="username" />
+        </div>
+        <div class="form-group">
+            <label for="password">Wachtwoord</label>
+            <input type="password" class="form-control" name="password" equired minlength="6" />
+        </div>
+        <div class="form-group">
+            <label for="Subscription">Abonnement</label>
+            <select class="form-control form-select-lg mb-3" name="Subscription" id="Subscription">
+                <option selected>Selecteer een abonnement</option>
+                <option value="true">ja</option>
+                <option value="false">nee</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="role">Rol</label><br>
+            <select class="form-control form-select-lg mb-3" name="role" id="role">
+                <option selected>Selecteer een rol</option>
+                <option value="user">user</option>
+                <option value="admin">admin</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn loginbutton btn-block">
+                pas aan
+            </button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-secondary btn-block" (click)="close()">annuleer</button>
+        </div>
+    </form>
+</div>

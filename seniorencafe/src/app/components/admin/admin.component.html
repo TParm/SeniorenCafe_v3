@@ -1,0 +1,130 @@
+<section id="playlistadd-sec">
+  <div class="jumbotron container">
+    <div className="container">
+      <div className="containeradd">
+
+        <label htmlFor="file">
+          <h2>Voeg uw bestanden toe</h2>
+        </label><br>
+        <input type="file" id="file" className="btn pl-0 btn-block" />
+
+        <ul className="mt-2 mb-2"><br>
+          <li id="key"><b>Bestandsnaam</b></li>
+        </ul>
+
+        <label htmlFor="titel">
+          <h2 className="mt-5"> Voer de titel van de playlist in:</h2>
+        </label>
+        <input type="text" id="titel" placeholder="titel" className="form-control" />
+        <br />
+        <br />
+
+        <button class="btn loginbutton btn-block">
+          Upload
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="useradd-sec">
+  <div class="jumbotron container">
+    <form>
+      <h1>Voeg een gebruiker toe</h1>
+      <div class="form-group">
+        <label for="username">Gebruikersnaam</label>
+        <input type="text" class="form-control" name="username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Wachtwoord</label>
+        <input type="password" class="form-control" name="password" equired minlength="6" />
+      </div>
+      <div class="form-group">
+        <label for="Subscription">Abonnement</label>
+        <select class="form-control form-select-lg mb-3" name="Subscription" id="Subscription">
+          <option selected>Selecteer een rol</option>
+          <option value="user">user</option>
+          <option value="admin">admin</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="role">Rol</label><br>
+        <select class="form-control form-select-lg mb-3" name="role" id="role">
+          <option slected>Selecteer een rol</option>
+          <option value="user">user</option>
+          <option value="admin">admin</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button class="btn loginbutton btn-block">
+          Registreer
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="userlist-sec">
+  <div class="jumbotron container">
+    <div class="listalign">
+      <div class="list row">
+        <div class="col-md-7">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Zoek een abbonee" />
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">
+                Zoek
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4>Abonnees</h4>
+          <ul class="list-group">
+            <li class="list-group-item" (click)="openDialog()">test abbonee <b>(klik hierop om aan te passen)(modal)</b>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <h4>Abonnee</h4>
+            <div class="gegevens">
+              <div>
+                <label><strong>id:</strong></label>
+              </div>
+              <div>
+                <label><strong>Password:</strong></label>
+              </div>
+              <div>
+                <label><strong>Username:</strong></label>
+              </div>
+              <div>
+                <label><strong>Subscription:</strong></label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <br />
+            <p>Selecteer een abbonee...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="circularMenu" class="circular-menu">
+
+  <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+    <i class="fa fa-plus"></i>
+  </a>
+
+  <menu class="items-wrapper">
+    <a href="/admin/#playlistadd-sec" class="menu-item far fa-file-audio"></a>
+    <a href="/admin/#useradd-sec" class="menu-item far fa-edit"></a>
+    <a href="/admin/#userlist-sec" class="menu-item far fa-address-book"></a>
+  </menu>
+
+</div>
