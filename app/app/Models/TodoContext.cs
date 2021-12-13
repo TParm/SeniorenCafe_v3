@@ -10,6 +10,7 @@ namespace app.Models
        {
        }
         public DbSet<UserItem> UserItems { get; set; } = null!;
+        public DbSet<RoleItem> RoleItems { get; set; } = null!;
         public DbSet<TodoItem> TodoItems { get; set; } = null!;
         
     }
