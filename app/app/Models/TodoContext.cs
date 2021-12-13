@@ -9,6 +9,8 @@ namespace app.Models
             : base(options)
        {
        }
+        public DbSet<UserItem> UserItems { get; set; } = null!;
         public DbSet<TodoItem> TodoItems { get; set; } = null!;
+        
     }
 }
